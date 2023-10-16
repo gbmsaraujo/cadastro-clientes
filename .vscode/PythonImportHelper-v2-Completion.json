@@ -1,0 +1,483 @@
+[
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroType",
+        "importPath": "src.controllers.types_controller.cadastro_types",
+        "description": "src.controllers.types_controller.cadastro_types",
+        "isExtraImport": true,
+        "detail": "src.controllers.types_controller.cadastro_types",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroType",
+        "importPath": "src.controllers.types_controller.cadastro_types",
+        "description": "src.controllers.types_controller.cadastro_types",
+        "isExtraImport": true,
+        "detail": "src.controllers.types_controller.cadastro_types",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaController",
+        "importPath": "src.controllers.types_controller.cadastro_types",
+        "description": "src.controllers.types_controller.cadastro_types",
+        "isExtraImport": true,
+        "detail": "src.controllers.types_controller.cadastro_types",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroType",
+        "importPath": "src.controllers.types_controller.cadastro_types",
+        "description": "src.controllers.types_controller.cadastro_types",
+        "isExtraImport": true,
+        "detail": "src.controllers.types_controller.cadastro_types",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroRepo",
+        "importPath": "models.repositories.interface.Icadastro_repo",
+        "description": "models.repositories.interface.Icadastro_repo",
+        "isExtraImport": true,
+        "detail": "models.repositories.interface.Icadastro_repo",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroRepo",
+        "importPath": "models.repositories.interface.Icadastro_repo",
+        "description": "models.repositories.interface.Icadastro_repo",
+        "isExtraImport": true,
+        "detail": "models.repositories.interface.Icadastro_repo",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroRepo",
+        "importPath": "src.models.repositories.interface.Icadastro_repo",
+        "description": "src.models.repositories.interface.Icadastro_repo",
+        "isExtraImport": true,
+        "detail": "src.models.repositories.interface.Icadastro_repo",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroRepo",
+        "importPath": "src.models.repositories.interface.Icadastro_repo",
+        "description": "src.models.repositories.interface.Icadastro_repo",
+        "isExtraImport": true,
+        "detail": "src.models.repositories.interface.Icadastro_repo",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroController",
+        "importPath": "src.controllers.interface.Icadastro_controller",
+        "description": "src.controllers.interface.Icadastro_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.interface.Icadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroController",
+        "importPath": "src.controllers.interface.Icadastro_controller",
+        "description": "src.controllers.interface.Icadastro_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.interface.Icadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroController",
+        "importPath": "src.controllers.cadastro_controller",
+        "description": "src.controllers.cadastro_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.cadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroRepository",
+        "importPath": "src.models.repositories.cadastro_repository",
+        "description": "src.models.repositories.cadastro_repository",
+        "isExtraImport": true,
+        "detail": "src.models.repositories.cadastro_repository",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask ",
+        "description": "flask ",
+        "isExtraImport": true,
+        "detail": "flask ",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask ",
+        "description": "flask ",
+        "isExtraImport": true,
+        "detail": "flask ",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask ",
+        "description": "flask ",
+        "isExtraImport": true,
+        "detail": "flask ",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "app_routes_bp",
+        "importPath": "src.main.routes.cadastro",
+        "description": "src.main.routes.cadastro",
+        "isExtraImport": true,
+        "detail": "src.main.routes.cadastro",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "src.models.configs.base",
+        "description": "src.models.configs.base",
+        "isExtraImport": true,
+        "detail": "src.models.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "src.models.configs.base",
+        "description": "src.models.configs.base",
+        "isExtraImport": true,
+        "detail": "src.models.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaType",
+        "importPath": "src.models.repositories.types.pessoas_type",
+        "description": "src.models.repositories.types.pessoas_type",
+        "isExtraImport": true,
+        "detail": "src.models.repositories.types.pessoas_type",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "importPath": "src.models.configs.connection",
+        "description": "src.models.configs.connection",
+        "isExtraImport": true,
+        "detail": "src.models.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "importPath": "src.models.configs.connection",
+        "description": "src.models.configs.connection",
+        "isExtraImport": true,
+        "detail": "src.models.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaEntity",
+        "importPath": "src.models.entities.pessoas",
+        "description": "src.models.entities.pessoas",
+        "isExtraImport": true,
+        "detail": "src.models.entities.pessoas",
+        "documentation": {}
+    },
+    {
+        "label": "HttpRequest",
+        "importPath": "src.views.types_view.http_request",
+        "description": "src.views.types_view.http_request",
+        "isExtraImport": true,
+        "detail": "src.views.types_view.http_request",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "src.views.types_view.http_response",
+        "description": "src.views.types_view.http_response",
+        "isExtraImport": true,
+        "detail": "src.views.types_view.http_response",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroRepository",
+        "importPath": "models.repositories.cadastro_repository",
+        "description": "models.repositories.cadastro_repository",
+        "isExtraImport": true,
+        "detail": "models.repositories.cadastro_repository",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "src.main.serve",
+        "description": "src.main.serve",
+        "isExtraImport": true,
+        "detail": "src.main.serve",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroController",
+        "kind": 6,
+        "importPath": "src.controllers.interface.Icadastro_controller",
+        "description": "src.controllers.interface.Icadastro_controller",
+        "peekOfCode": "class ICadastroController(ABC):\n    @abstractmethod\n    def cadastrar_pessoa(self, pessoa: CadastroType):\n        pass\n    @abstractmethod\n    def buscar_pessoa_por_nome(self, nome: str):\n        pass\n    @abstractmethod\n    def deletar_pessoa_pelo_nome(self, nome: str):\n        pass",
+        "detail": "src.controllers.interface.Icadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroType",
+        "kind": 6,
+        "importPath": "src.controllers.types_controller.cadastro_types",
+        "description": "src.controllers.types_controller.cadastro_types",
+        "peekOfCode": "class CadastroType:\n    def __init__(self, nome, idade, bairro, profissao ):\n        self.nome = nome\n        self.idade = idade\n        self.bairro = bairro\n        self.profissao = profissao",
+        "detail": "src.controllers.types_controller.cadastro_types",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroController",
+        "kind": 6,
+        "importPath": "src.controllers.cadastro_controller",
+        "description": "src.controllers.cadastro_controller",
+        "peekOfCode": "class CadastroController(ICadastroController):\n    def __init__(self, cadastro_db: ICadastroRepo) -> None:\n        self.cadastro_db = cadastro_db\n    def cadastrar_pessoa(self, pessoa: CadastroType):\n        try:\n            self.cadastro_db.insert_client(pessoa)\n            return \"Pessoa cadastrada com sucesso!\"\n        except:\n            return \"Erro ao cadastrar pessoa!\"\n    def buscar_pessoa_por_nome(self, nome: str):",
+        "detail": "src.controllers.cadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro_compose",
+        "kind": 2,
+        "importPath": "src.main.composer.cadastro_compose",
+        "description": "src.main.composer.cadastro_compose",
+        "peekOfCode": "def cadastro_compose():\n    cadastro_db = CadastroRepository()\n    cadastro_controller = CadastroController(cadastro_db)\n    cadastro_view = \"\"",
+        "detail": "src.main.composer.cadastro_compose",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "src.main.routes.cadastro",
+        "description": "src.main.routes.cadastro",
+        "peekOfCode": "def index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    payload = request.json\n    print(payload)\n    return \"Ok\"",
+        "detail": "src.main.routes.cadastro",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro",
+        "kind": 2,
+        "importPath": "src.main.routes.cadastro",
+        "description": "src.main.routes.cadastro",
+        "peekOfCode": "def cadastro():\n    payload = request.json\n    print(payload)\n    return \"Ok\"",
+        "detail": "src.main.routes.cadastro",
+        "documentation": {}
+    },
+    {
+        "label": "app_routes_bp",
+        "kind": 5,
+        "importPath": "src.main.routes.cadastro",
+        "description": "src.main.routes.cadastro",
+        "peekOfCode": "app_routes_bp = Blueprint(\"api_routes\", __name__)\n@app_routes_bp.route('/')\ndef index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    payload = request.json\n    print(payload)\n    return \"Ok\"",
+        "detail": "src.main.routes.cadastro",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.main.serve",
+        "description": "src.main.serve",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\napp.register_blueprint(app_routes_bp)",
+        "detail": "src.main.serve",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "src.models.configs.base",
+        "description": "src.models.configs.base",
+        "peekOfCode": "Base = declarative_base()",
+        "detail": "src.models.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "kind": 6,
+        "importPath": "src.models.configs.connection",
+        "description": "src.models.configs.connection",
+        "peekOfCode": "class DBConnectionHandler:\n    def __init__(self) -> None:\n        self.__connection_string = 'mysql+pymysql://gabriel:Ari&l0515@localhost:3306/cadastro'\n        self.__engine = self.__create_database_engine()\n        self.session = None\n    def __create_database_engine(self):\n        engine = create_engine(self.__connection_string)\n        return engine\n    def get_engine(self):\n        return self.__engine",
+        "detail": "src.models.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaEntity",
+        "kind": 6,
+        "importPath": "src.models.entities.pessoas",
+        "description": "src.models.entities.pessoas",
+        "peekOfCode": "class PessoaEntity(Base):\n    __tablename__ = 'pessoa'\n    id = Column(Integer, primary_key=True, nullable=False)\n    nome = Column(String(100), nullable=False)\n    idade = Column(Integer, nullable=False)\n    bairro = Column(String(200), nullable=False)\n    profissao = Column(String(200), nullable=False)",
+        "detail": "src.models.entities.pessoas",
+        "documentation": {}
+    },
+    {
+        "label": "ICadastroRepo",
+        "kind": 6,
+        "importPath": "src.models.repositories.interface.Icadastro_repo",
+        "description": "src.models.repositories.interface.Icadastro_repo",
+        "peekOfCode": "class ICadastroRepo(ABC):\n    @abstractmethod\n    def get_clients(self) -> List[PessoaType]:\n        pass\n    @abstractmethod\n    def search_client_by_name(self, name: str) -> PessoaType or None:\n        pass\n    @abstractmethod\n    def delete_client_by_name(self, name: str) -> bool:\n        pass",
+        "detail": "src.models.repositories.interface.Icadastro_repo",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaType",
+        "kind": 6,
+        "importPath": "src.models.repositories.types.pessoas_type",
+        "description": "src.models.repositories.types.pessoas_type",
+        "peekOfCode": "class PessoaType:\n    def __init__(\n        self,\n        nome: str = None,\n        idade: int = None,\n        bairro: str = None,\n        profissao: str = None,\n    ):\n        self.nome = nome\n        self.idade = idade",
+        "detail": "src.models.repositories.types.pessoas_type",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroRepository",
+        "kind": 6,
+        "importPath": "src.models.repositories.cadastro_repository",
+        "description": "src.models.repositories.cadastro_repository",
+        "peekOfCode": "class CadastroRepository(ICadastroRepo):\n    def get_clients(self):\n        with DBConnectionHandler() as db:\n            data = db.session.query(PessoaEntity).all()\n            pessoas = [pessoa.__dict__ for pessoa in data] if data else None\n            return pessoas\n    def insert_client(self, client: CadastroType):\n        with DBConnectionHandler() as db:\n            pessoa = PessoaEntity(\n                nome=client.nome.lower(),",
+        "detail": "src.models.repositories.cadastro_repository",
+        "documentation": {}
+    },
+    {
+        "label": "HttpRequest",
+        "kind": 6,
+        "importPath": "src.views.types_view.http_request",
+        "description": "src.views.types_view.http_request",
+        "peekOfCode": "class HttpRequest:\n    def __init__(\n        self,\n        header: dict = None,\n        body: dict = None,\n        query_params: dict = None,\n        url: str = None,\n        token_information: dict = None\n    ):\n        self.header = header",
+        "detail": "src.views.types_view.http_request",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "kind": 6,
+        "importPath": "src.views.types_view.http_response",
+        "description": "src.views.types_view.http_response",
+        "peekOfCode": "class HttpResponse:\n    def __init__(self, status_code, response) -> None:\n        self.status_code = status_code\n        self.response = response",
+        "detail": "src.views.types_view.http_response",
+        "documentation": {}
+    },
+    {
+        "label": "CadastroView",
+        "kind": 6,
+        "importPath": "src.views.cadastro_view",
+        "description": "src.views.cadastro_view",
+        "peekOfCode": "class CadastroView:\n    def __init__(self, cadastro_controller: ICadastroController) -> None:\n        self.__controller = cadastro_controller\n    def cadastrar_view(self, req: HttpRequest) -> HttpResponse:\n        client = req.body\n        try:\n            response = self.__controller.cadastrar_pessoa(client)\n            if response:\n                return self.__convert_to_dict(HttpResponse(200, response))\n        except Exception as exception:",
+        "detail": "src.views.cadastro_view",
+        "documentation": {}
+    }
+]
