@@ -31,10 +31,10 @@ class CadastroView:
             return HttpResponse(
                 200,
                 {
-                    "nome": response.__dict__["nome"],
-                    "bairro": response.__dict__["bairro"],
-                    "idade": response.__dict__["idade"],
-                    "profissao": response.__dict__["profissao"],
+                    "nome": response["nome"],
+                    "bairro": response["bairro"],
+                    "idade": response["idade"],
+                    "profissao": response["profissao"],
                 },
             ).__dict__
 

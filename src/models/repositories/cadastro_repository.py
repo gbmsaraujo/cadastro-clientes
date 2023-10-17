@@ -31,7 +31,7 @@ class CadastroRepository(ICadastroRepo):
                 .first()
             )
 
-            return pessoa if pessoa else None
+            return pessoa.__dict__ if pessoa else None
 
     def delete_client_by_name(self, name):
         with DBConnectionHandler() as db:
@@ -50,10 +50,7 @@ class CadastroRepository(ICadastroRepo):
 
     def update_info_person(self, info_client: CadastroType):
         with DBConnectionHandler() as db:
-            pessoa_db = self.search_client_by_name(info_client['nome'])
-
-            print(pessoa_db.__dict__)
-            print(info_client)
+            pessoa_db = db.session.query(PessoaEntity).filter_by(nome = info_client['nome'].lower()).first()
 
             if not pessoa_db:
                 return
