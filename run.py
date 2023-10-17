@@ -1,4 +1,3 @@
-from models.repositories.cadastro_repository import CadastroRepository
 from src.models.configs.connection import DBConnectionHandler
 from src.models.configs.base import Base
 from src.main.serve import app as application

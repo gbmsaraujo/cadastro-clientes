@@ -7,64 +7,70 @@ class CadastroView:
     def __init__(self, cadastro_controller: ICadastroController) -> None:
         self.__controller = cadastro_controller
 
-    def cadastrar_view(self, req: HttpRequest) -> HttpResponse:
-        client = req.body
+    def cadastrar_view(self, http_request: HttpRequest) -> HttpResponse:
+        client = http_request.body
+
         try:
             response = self.__controller.cadastrar_pessoa(client)
 
             if response:
-                return self.__convert_to_dict(HttpResponse(200, response))
+                return HttpResponse(200, response).__dict__
 
         except Exception as exception:
-            return self.__convert_to_dict(HttpResponse(400, str(exception)))
+            return HttpResponse(400, str(exception)).__dict__
 
-    def buscar_view(self, req: HttpRequest) -> HttpResponse:
-        nome = req.body["nome"]
+    def buscar_view(self, http_request: HttpRequest) -> HttpResponse:
+        nome = http_request.body["nome"].lower()
 
         try:
             response = self.__controller.buscar_pessoa_por_nome(nome)
 
             if not response:
-                self.__convert_to_dict(
-                    HttpResponse(200, "Não há usuários com esse nome")
-                )
+                (HttpResponse(200, "Não há usuários com esse nome")).__dict__
 
-            return self.__convert_to_dict(HttpResponse(200, response.__dict__))
+            return HttpResponse(
+                200,
+                {
+                    "nome": response.__dict__["nome"],
+                    "bairro": response.__dict__["bairro"],
+                    "idade": response.__dict__["idade"],
+                    "profissao": response.__dict__["profissao"],
+                },
+            ).__dict__
 
         except Exception as exception:
-            return self.__convert_to_dict(HttpResponse(400, str(exception)))
+            return HttpResponse(400, str(exception)).__dict__
 
-    def deletar_view(self, req: HttpRequest) -> HttpResponse:
-        nome = req.body["nome"]
+    def deletar_view(self, http_request: HttpRequest) -> HttpResponse:
+        nome = http_request.body["nome"]
 
         try:
             response = self.__controller.deletar_pessoa_pelo_nome(nome)
 
             if not response:
-                return self.__convert_to_dict(
-                    HttpResponse(200, "Não há usuários para deletar")
-                )
-            return self.__convert_to_dict(
-                HttpResponse(200, "Usuário deletado com sucesso")
-            )
-        except Exception as exception:
-            return self.__convert_to_dict(HttpResponse(400, str(exception)))
+                return HttpResponse(200, "Não há usuários para deletar").__dict__
+            return HttpResponse(200, "Usuário deletado com sucesso").__dict__
 
-    def atualizar_view(self, req: HttpRequest) -> HttpResponse:
-        info_client = req.body
+        except Exception as exception:
+            return HttpResponse(400, str(exception)).__dict__
+
+    def atualizar_view(self, http_request: HttpRequest) -> HttpResponse:
+        info_client = http_request.body
 
         try:
             response = self.__controller.alterar_cadastro(info_client)
 
             if not response:
-                return self.__convert_to_dict(
-                    HttpResponse(200, "Não há usuários para atualizar")
-                )
-            return self.__convert_to_dict(
-                HttpResponse(200, "Usuário atualizado com sucesso")
-            )
+                return HttpResponse(200, "Não há usuários para atualizar").__dict__
+            return HttpResponse(200, "Usuário atualizado com sucesso").__dict__
         except Exception as exception:
-            return self.__convert_to_dict(HttpResponse(400, str(exception)))
+            return HttpResponse(400, str(exception)).__dict__
 
     def __convert_to_dict(obj_response):
         return obj_response.__dict__
+
+
+
+# Duvidas:
+    # Como devolver uma resposta? Tirar o dict
+    # Mostrar o erro do buscar view se devolvemos direto o response ao invés do dicionario

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.controllers.types_controller.cadastro_types import CadastroType
+from src.models.types.cadastro_type import CadastroType
 
 
 class ICadastroController(ABC):
@@ -16,5 +16,5 @@ class ICadastroController(ABC):
         pass
 
     @abstractmethod
-    def alterar_cadastro(self, info_cliente: CadastroType):
+    def alterar_cadastro(self, pessoa: CadastroType):
         pass

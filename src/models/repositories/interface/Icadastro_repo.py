@@ -1,16 +1,15 @@
 from abc import ABC, abstractmethod
-from typing import List, Dict
-from src.models.repositories.types.pessoas_type import PessoaType
-from src.controllers.types_controller.cadastro_types import PessoaController
+from typing import List
+from src.models.types.cadastro_type import CadastroType
+
 
 class ICadastroRepo(ABC):
-
     @abstractmethod
-    def get_clients(self) -> List[PessoaType]:
+    def get_clients(self) -> List[CadastroType]:
         pass
 
     @abstractmethod
-    def search_client_by_name(self, name: str) -> PessoaType or None:
+    def search_client_by_name(self, name: str) -> CadastroType or None:
         pass
 
     @abstractmethod
@@ -18,9 +17,9 @@ class ICadastroRepo(ABC):
         pass
 
     @abstractmethod
-    def update_info_person(self, name: str, age: int, profession: str, neighborhood: str) -> bool:
+    def update_info_person(self, name: str, info_client: CadastroType) -> bool:
         pass
 
     @abstractmethod
-    def insert_client(self, pessoa: PessoaController) -> bool:
+    def insert_client(self, info_client: CadastroType) -> bool:
         pass

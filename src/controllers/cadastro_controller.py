@@ -1,7 +1,6 @@
-from src.controllers.types_controller.cadastro_types import CadastroType
-from models.repositories.interface.Icadastro_repo import ICadastroRepo
 from src.models.repositories.interface.Icadastro_repo import ICadastroRepo
 from src.controllers.interface.Icadastro_controller import ICadastroController
+from src.models.types.cadastro_type import CadastroType
 
 
 class CadastroController(ICadastroController):
@@ -12,11 +11,12 @@ class CadastroController(ICadastroController):
         try:
             self.cadastro_db.insert_client(pessoa)
             return "Pessoa cadastrada com sucesso!"
-        except:
-            return "Erro ao cadastrar pessoa!"
+        except ValueError as error:
+            return error
 
     def buscar_pessoa_por_nome(self, nome: str):
-        query = self.cadastro_db(nome)
+        print(nome)
+        query = self.cadastro_db.search_client_by_name(nome)
 
         return query
 
@@ -25,7 +25,7 @@ class CadastroController(ICadastroController):
 
         return query
 
-    def alterar_cadastro(self, info_cliente: CadastroType):
-        query = self.cadastro_db.update_info_person(info_cliente)
+    def alterar_cadastro(self, info_client: CadastroType):
+        query = self.cadastro_db.update_info_person(info_client)
 
         return query

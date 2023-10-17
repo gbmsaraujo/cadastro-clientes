@@ -1,4 +1,4 @@
-class PessoaType:
+class CadastroType:
     def __init__(
         self,
         nome: str = None,
