@@ -54,9 +54,9 @@ class CadastroController(ICadastroController):
             "response"
             if person
             else None: {
-                "nome": person.nome,
-                "idade": person.idade,
-                "bairro": person.bairro,
-                "profissão": person.profissao,
+                "nome": person['nome'],
+                "idade": person['idade'],
+                "bairro": person['bairro'],
+                "profissão": person['profissao'],
             },
         }

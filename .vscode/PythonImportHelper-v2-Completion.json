@@ -80,6 +80,22 @@
         "documentation": {}
     },
     {
+        "label": "CadastroType",
+        "importPath": "src.models.types.cadastro_type",
+        "description": "src.models.types.cadastro_type",
+        "isExtraImport": true,
+        "detail": "src.models.types.cadastro_type",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "src.views.types_view.http_response",
+        "description": "src.views.types_view.http_response",
+        "isExtraImport": true,
+        "detail": "src.views.types_view.http_response",
+        "documentation": {}
+    },
+    {
         "label": "HttpResponse",
         "importPath": "src.views.types_view.http_response",
         "description": "src.views.types_view.http_response",
@@ -157,6 +173,46 @@
         "description": "src.errors.types.http_not_found",
         "isExtraImport": true,
         "detail": "src.errors.types.http_not_found",
+        "documentation": {}
+    },
+    {
+        "label": "HttpNotFoundError",
+        "importPath": "src.errors.types.http_not_found",
+        "description": "src.errors.types.http_not_found",
+        "isExtraImport": true,
+        "detail": "src.errors.types.http_not_found",
+        "documentation": {}
+    },
+    {
+        "label": "HttpNotFoundError",
+        "importPath": "src.errors.types.http_not_found",
+        "description": "src.errors.types.http_not_found",
+        "isExtraImport": true,
+        "detail": "src.errors.types.http_not_found",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaEntity",
+        "importPath": "src.models.entities.pessoas",
+        "description": "src.models.entities.pessoas",
+        "isExtraImport": true,
+        "detail": "src.models.entities.pessoas",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaEntity",
+        "importPath": "src.models.entities.pessoas",
+        "description": "src.models.entities.pessoas",
+        "isExtraImport": true,
+        "detail": "src.models.entities.pessoas",
+        "documentation": {}
+    },
+    {
+        "label": "HttpUnprocessableEntityError",
+        "importPath": "src.errors.types.http_unprocessable_entity_error",
+        "description": "src.errors.types.http_unprocessable_entity_error",
+        "isExtraImport": true,
+        "detail": "src.errors.types.http_unprocessable_entity_error",
         "documentation": {}
     },
     {
@@ -272,27 +328,11 @@
         "documentation": {}
     },
     {
-        "label": "body_validator",
-        "importPath": "src.validators.insert_user_validator",
-        "description": "src.validators.insert_user_validator",
-        "isExtraImport": true,
-        "detail": "src.validators.insert_user_validator",
-        "documentation": {}
-    },
-    {
         "label": "handle_errors",
         "importPath": "src.errors.handle_errors",
         "description": "src.errors.handle_errors",
         "isExtraImport": true,
         "detail": "src.errors.handle_errors",
-        "documentation": {}
-    },
-    {
-        "label": "user_name_validator",
-        "importPath": "src.validators.user_name_validator",
-        "description": "src.validators.user_name_validator",
-        "isExtraImport": true,
-        "detail": "src.validators.user_name_validator",
         "documentation": {}
     },
     {
@@ -408,11 +448,19 @@
         "documentation": {}
     },
     {
-        "label": "PessoaEntity",
-        "importPath": "src.models.entities.pessoas",
-        "description": "src.models.entities.pessoas",
+        "label": "Validator",
+        "importPath": "cerberus",
+        "description": "cerberus",
         "isExtraImport": true,
-        "detail": "src.models.entities.pessoas",
+        "detail": "cerberus",
+        "documentation": {}
+    },
+    {
+        "label": "Validator",
+        "importPath": "cerberus",
+        "description": "cerberus",
+        "isExtraImport": true,
+        "detail": "cerberus",
         "documentation": {}
     },
     {
@@ -429,6 +477,30 @@
         "description": "cerberus",
         "isExtraImport": true,
         "detail": "cerberus",
+        "documentation": {}
+    },
+    {
+        "label": "handle_validations",
+        "importPath": "src.validators.handle_validation",
+        "description": "src.validators.handle_validation",
+        "isExtraImport": true,
+        "detail": "src.validators.handle_validation",
+        "documentation": {}
+    },
+    {
+        "label": "user_name_validator",
+        "importPath": "src.validators.validations.user_name_validator",
+        "description": "src.validators.validations.user_name_validator",
+        "isExtraImport": true,
+        "detail": "src.validators.validations.user_name_validator",
+        "documentation": {}
+    },
+    {
+        "label": "body_validator",
+        "importPath": "src.validators.validations.insert_user_validator",
+        "description": "src.validators.validations.insert_user_validator",
+        "isExtraImport": true,
+        "detail": "src.validators.validations.insert_user_validator",
         "documentation": {}
     },
     {
@@ -455,6 +527,42 @@
         "description": "src.controllers.cadastro_controller",
         "peekOfCode": "class CadastroController(ICadastroController):\n    def __init__(self, cadastro_db: ICadastroRepo):\n        self.cadastro_db = cadastro_db\n    def cadastrar_pessoa(self, pessoa: CadastroType) -> HttpResponse:\n        self.cadastro_db.insert_client(pessoa)\n        return self.__format_response(\n            person=pessoa, status_code=201, message=\"Cadastro Realizado Com Sucesso\"\n        )\n    def buscar_pessoa_por_nome(self, nome: str):\n        query = self.cadastro_db.search_client_by_name(nome)",
         "detail": "src.controllers.cadastro_controller",
+        "documentation": {}
+    },
+    {
+        "label": "SpyCadastroRepo",
+        "kind": 6,
+        "importPath": "src.controllers.cadastro_controller_test",
+        "description": "src.controllers.cadastro_controller_test",
+        "peekOfCode": "class SpyCadastroRepo:\n    def __init__(self) -> None:\n        self.search_client_by_name_attribute = {}\n    def search_client_by_name(self, name: str) -> PessoaEntity:\n        self.search_client_by_name_attribute[\"name\"] = name\n        return PessoaEntity(\n            id=123,\n            nome=\"ze da manga\",\n            idade=10,\n            bairro=\"something\",",
+        "detail": "src.controllers.cadastro_controller_test",
+        "documentation": {}
+    },
+    {
+        "label": "SpyCadastroRepoNotFoundError",
+        "kind": 6,
+        "importPath": "src.controllers.cadastro_controller_test",
+        "description": "src.controllers.cadastro_controller_test",
+        "peekOfCode": "class SpyCadastroRepoNotFoundError:\n    def __init__(self) -> None:\n        self.search_client_by_name_attribute = {}\n    def search_client_by_name(self, name: str) -> PessoaEntity:\n        self.search_client_by_name_attribute[\"name\"] = name\n        return None\ndef test_buscar_pessoa_por_nome():\n    mock_name = \"olaMundo\"\n    repo = SpyCadastroRepo()\n    controller = CadastroController(repo)",
+        "detail": "src.controllers.cadastro_controller_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_buscar_pessoa_por_nome",
+        "kind": 2,
+        "importPath": "src.controllers.cadastro_controller_test",
+        "description": "src.controllers.cadastro_controller_test",
+        "peekOfCode": "def test_buscar_pessoa_por_nome():\n    mock_name = \"olaMundo\"\n    repo = SpyCadastroRepo()\n    controller = CadastroController(repo)\n    response = controller.buscar_pessoa_por_nome(mock_name)\n    assert repo.search_client_by_name_attribute[\"name\"] == mock_name\n    assert isinstance(response, dict)\n    assert \"status_code\" in response\n    assert isinstance(response[\"status_code\"], int)\n    assert \"response\" in response",
+        "detail": "src.controllers.cadastro_controller_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_buscar_pessoa_por_nome_not_found",
+        "kind": 2,
+        "importPath": "src.controllers.cadastro_controller_test",
+        "description": "src.controllers.cadastro_controller_test",
+        "peekOfCode": "def test_buscar_pessoa_por_nome_not_found():\n    mock_name = \"olaMundo\"\n    repo = SpyCadastroRepoNotFoundError()\n    controller = CadastroController(repo)\n    try:\n        controller.buscar_pessoa_por_nome(mock_name)\n        assert False\n    except Exception as exception:\n        assert repo.search_client_by_name_attribute[\"name\"] == mock_name\n        assert isinstance(exception, HttpNotFoundError)",
+        "detail": "src.controllers.cadastro_controller_test",
         "documentation": {}
     },
     {
@@ -507,7 +615,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    validator = body_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )",
+        "peekOfCode": "def index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])\ndef delete():\n    http_request = request_adapter(request)",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -516,7 +624,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def cadastro():\n    http_request = request_adapter(request)\n    validator = body_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])",
+        "peekOfCode": "def cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])\ndef delete():\n    http_request = request_adapter(request)\n    response = cadastro_compose().deletar_view(http_request)\n    return response\n@app_routes_bp.route(\"/pesquisar\", methods=[\"POST\"])",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -525,7 +633,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def delete():\n    http_request = request_adapter(request)\n    validator = user_name_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )\n    response = cadastro_compose().deletar_view(http_request)\n    return response\n@app_routes_bp.route(\"/pesquisar\", methods=[\"POST\"])",
+        "peekOfCode": "def delete():\n    http_request = request_adapter(request)\n    response = cadastro_compose().deletar_view(http_request)\n    return response\n@app_routes_bp.route(\"/pesquisar\", methods=[\"POST\"])\ndef pesquisa():\n    http_request = request_adapter(request)\n    response = cadastro_compose().buscar_view(http_request)\n    return response\n@app_routes_bp.route(\"/atualizar\", methods=[\"POST\"])",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -534,7 +642,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def pesquisa():\n    http_request = request_adapter(request)\n    validator = user_name_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )\n    response = cadastro_compose().buscar_view(http_request)\n    return response\n@app_routes_bp.route(\"/atualizar\", methods=[\"POST\"])",
+        "peekOfCode": "def pesquisa():\n    http_request = request_adapter(request)\n    response = cadastro_compose().buscar_view(http_request)\n    return response\n@app_routes_bp.route(\"/atualizar\", methods=[\"POST\"])\ndef atualizar():\n    http_request = request_adapter(request)\n    response = cadastro_compose().atualizar_view(http_request)\n    return response",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -543,7 +651,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def atualizar():\n    http_request = request_adapter(request)\n    validator = body_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )\n    response = cadastro_compose().atualizar_view(http_request)\n    return response",
+        "peekOfCode": "def atualizar():\n    http_request = request_adapter(request)\n    response = cadastro_compose().atualizar_view(http_request)\n    return response",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -552,7 +660,7 @@
         "kind": 5,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "app_routes_bp = Blueprint(\"api_routes\", __name__)\n@app_routes_bp.route(\"/\")\ndef index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    validator = body_validator.validate(http_request.body)\n    if not validator:\n        raise HttpUnprocessableEntityError(",
+        "peekOfCode": "app_routes_bp = Blueprint(\"api_routes\", __name__)\n@app_routes_bp.route(\"/\")\ndef index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -622,19 +730,55 @@
     {
         "label": "body_validator",
         "kind": 5,
-        "importPath": "src.validators.insert_user_validator",
-        "description": "src.validators.insert_user_validator",
-        "peekOfCode": "body_validator = Validator(\n    {\n        \"data\": {\n            \"type\": \"dict\",\n            \"schema\": {\n                \"nome\": {\"type\": \"string\", \"required\": True, \"empty\": False},\n                \"idade\": {\"type\": \"float\", \"required\": False, \"empty\": False},\n                \"bairro\": {\"type\": \"string\", \"required\": True, \"empty\": True},\n                \"profissao\": {\"type\": \"string\", \"required\": False, \"empty\": False},\n            },",
-        "detail": "src.validators.insert_user_validator",
+        "importPath": "src.validators.validations.insert_user_validator",
+        "description": "src.validators.validations.insert_user_validator",
+        "peekOfCode": "body_validator = Validator(\n    {\n        \"nome\": {\"type\": \"string\", \"required\": True, \"empty\": False},\n        \"idade\": {\"type\": \"float\", \"required\": False, \"empty\": False},\n        \"bairro\": {\"type\": \"string\", \"required\": True, \"empty\": True},\n        \"profissao\": {\"type\": \"string\", \"required\": False, \"empty\": False},\n    }\n)",
+        "detail": "src.validators.validations.insert_user_validator",
         "documentation": {}
     },
     {
         "label": "user_name_validator",
         "kind": 5,
-        "importPath": "src.validators.user_name_validator",
-        "description": "src.validators.user_name_validator",
-        "peekOfCode": "user_name_validator = Validator({\n    \"data\": {\n        \"type\": \"dict\",\n        \"schema\": {\n            \"nome\": { \"type\": \"string\", \"required\": True, \"empty\": False },\n        }\n    },\n})",
-        "detail": "src.validators.user_name_validator",
+        "importPath": "src.validators.validations.user_name_validator",
+        "description": "src.validators.validations.user_name_validator",
+        "peekOfCode": "user_name_validator = Validator(\n    {\n        \"nome\": {\"type\": \"string\", \"required\": True, \"empty\": False},\n    }\n)",
+        "detail": "src.validators.validations.user_name_validator",
+        "documentation": {}
+    },
+    {
+        "label": "handle_validations",
+        "kind": 2,
+        "importPath": "src.validators.handle_validation",
+        "description": "src.validators.handle_validation",
+        "peekOfCode": "def handle_validations(validator:Validator, data: dict):\n    validate_data = validator.validate(data)\n    if not validate_data:\n        raise HttpUnprocessableEntityError(\n            message=\"Erro ao processar o body, verifique os parâmetros enviados\"\n        )",
+        "detail": "src.validators.handle_validation",
+        "documentation": {}
+    },
+    {
+        "label": "test_handle_validation",
+        "kind": 2,
+        "importPath": "src.validators.handle_validation_test",
+        "description": "src.validators.handle_validation_test",
+        "peekOfCode": "def test_handle_validation():\n    data = {\n        \"nome\": \"Gabriel\",\n        \"idade\": 30,\n        \"bairro\": \"Riachuelo\",\n        \"profissao\": \"Programador\",\n    }\n    validate_data = mock_validator.validate(data)\n    assert validate_data is True\ndef test_error_handle_validation():",
+        "detail": "src.validators.handle_validation_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_error_handle_validation",
+        "kind": 2,
+        "importPath": "src.validators.handle_validation_test",
+        "description": "src.validators.handle_validation_test",
+        "peekOfCode": "def test_error_handle_validation():\n    data = {}\n    try:\n        validate_data = mock_validator.validate(data)\n    except Exception as exception:\n        assert isinstance(exception, HttpUnprocessableEntityError)\n        assert (\n            str(exception)\n            == \"Erro ao processar o body, verifique os parâmetros enviados\"\n        )",
+        "detail": "src.validators.handle_validation_test",
+        "documentation": {}
+    },
+    {
+        "label": "mock_validator",
+        "kind": 5,
+        "importPath": "src.validators.handle_validation_test",
+        "description": "src.validators.handle_validation_test",
+        "peekOfCode": "mock_validator = Validator(\n    {\n        \"nome\": {\"type\": \"string\", \"required\": True, \"empty\": False},\n        \"idade\": {\"type\": \"float\", \"required\": False, \"empty\": False},\n        \"bairro\": {\"type\": \"string\", \"required\": True, \"empty\": True},\n        \"profissao\": {\"type\": \"string\", \"required\": False, \"empty\": False},\n    }\n)\ndef test_handle_validation():\n    data = {",
+        "detail": "src.validators.handle_validation_test",
         "documentation": {}
     },
     {
@@ -669,8 +813,26 @@
         "kind": 6,
         "importPath": "src.views.cadastro_view",
         "description": "src.views.cadastro_view",
-        "peekOfCode": "class CadastroView:\n    def __init__(self, cadastro_controller: ICadastroController) -> None:\n        self.__controller = cadastro_controller\n    def cadastrar_view(self, http_request: HttpRequest) -> HttpResponse:\n        client = http_request.body\n        try:\n            response = self.__controller.cadastrar_pessoa(client)\n            if response:\n                return HttpResponse(200, response).__dict__\n        except Exception as exception:",
+        "peekOfCode": "class CadastroView:\n    def __init__(self, cadastro_controller: ICadastroController) -> None:\n        self.__controller = cadastro_controller\n    def cadastrar_view(self, http_request: HttpRequest) -> HttpResponse:\n        try:\n            handle_validations(body_validator, http_request.body)\n            response = self.__controller.cadastrar_pessoa(http_request.body)\n            return response\n        except Exception as exception:\n            return str(exception)",
         "detail": "src.views.cadastro_view",
+        "documentation": {}
+    },
+    {
+        "label": "MockCadastroController",
+        "kind": 6,
+        "importPath": "src.views.cadastro_view_test",
+        "description": "src.views.cadastro_view_test",
+        "peekOfCode": "class MockCadastroController:\n    def cadastrar_pessoa(self, pessoa: CadastroType) -> HttpResponse:\n        return {\n            \"status_code\": 201,\n            \"message\": \"Cadastro Realizado Com Sucesso\",\n            \"response\": {\n                \"nome\": pessoa[\"nome\"],\n                \"idade\": pessoa[\"idade\"],\n                \"bairro\": pessoa[\"bairro\"],\n                \"profissão\": pessoa[\"profissao\"],",
+        "detail": "src.views.cadastro_view_test",
+        "documentation": {}
+    },
+    {
+        "label": "pessoa_mock",
+        "kind": 5,
+        "importPath": "src.views.cadastro_view_test",
+        "description": "src.views.cadastro_view_test",
+        "peekOfCode": "pessoa_mock = (\n    {\n        \"nome\": \"gabriel\",\n        \"idade\": 30,\n        \"bairro\": \"Maracanã\",\n        \"profissão\": \"Programador\",\n    },\n)\nclass MockCadastroController:\n    def cadastrar_pessoa(self, pessoa: CadastroType) -> HttpResponse:",
+        "detail": "src.views.cadastro_view_test",
         "documentation": {}
     }
 ]
