@@ -11,7 +11,7 @@ jobs:
     
     steps: 
     - name: Create private key file
-      run: echo "$PRIVATE_KEY" > private_key
+      run: echo "${{ secrets.EC2_SSH_KEY }}" > private_key
 
     - name: Set permissions for private key file
       run: chmod 600 private_key
@@ -23,8 +23,6 @@ jobs:
         USER_NAME: ${{ secrets.USER_NAME }}
       
       run: |
-        echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
         ssh -i private_key ${USER_NAME}@${HOST_NAME} 'cd apps/cadastro-clientes && source venv/bin/activate && pip install -r requirements.txt && git pull origin main && sudo systemctl stop cadastroapp.service && sudo systemctl daemon-reload && sudo systemctl start cadastroapp.service'
-
 
 
