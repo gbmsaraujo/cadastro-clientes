@@ -7,8 +7,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     name: Deploy to EC2 🚀
-        uses: actions/checkout@v2
-
+    
     steps: 
     - name: Deploy in EC2
       env:
