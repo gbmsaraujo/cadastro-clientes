@@ -1,0 +1,9 @@
+Cerberus==1.3.5
+Flask==3.0.3
+Flask-Cors==4.0.0
+gunicorn==21.2.0
+PyMySQL==1.1.0
+python-dotenv==1.0.1
+requests==2.25.1
+SQLAlchemy==2.0.29
+cryptography==3.4.8
