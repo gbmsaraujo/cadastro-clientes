@@ -18,6 +18,9 @@ jobs:
 
     - name: Set permissions for private key file
       run: chmod 600 private_key
+
+    - name: Check private_key
+      run: cat private_key
       
     - name: Deploy in EC2
       env:
