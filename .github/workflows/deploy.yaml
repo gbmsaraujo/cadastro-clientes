@@ -25,4 +25,3 @@ jobs:
       run: |
         ssh -i private_key ${USER_NAME}@${HOST_NAME} 'cd apps/cadastro-clientes && source venv/bin/activate && pip install -r requirements.txt && git pull origin main && sudo systemctl stop cadastroapp.service && sudo systemctl daemon-reload && sudo systemctl start cadastroapp.service'
 
-
