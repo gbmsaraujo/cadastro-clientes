@@ -3,8 +3,9 @@ name: Flask Deployment
 on:
   push:
     branches: [ main ]
+
 jobs:
-  Deploy:
+  deploy:
     runs-on: ubuntu-latest
     name: Deploy to EC2 🚀
     
@@ -15,17 +16,8 @@ jobs:
         HOST_NAME: ${{ secrets.EC2_HOST }}
         USER_NAME: ${{ secrets.USER_NAME }}
       
-      run:
-        ssh -i {PRIVATE_KEY} ${USER_NAME}@${HOST_NAME}
-        ls &&
-        cd apps/ &&
-        ls &&
-        cadastro-clientes/ &&
-        git pull origin main &&
-        sudo systemctl stop cadastroapp.service &&
-        sudo systemctl daemon-reload &&
-        sudo systemctl start cadastroapp.service
-
+      run: |
+        ssh -i $PRIVATE_KEY $USER_NAME@$HOST_NAME 'cd apps/cadastro-clientes && source venv/bin/activate && pip install -r requirements.txt && git pull origin main && sudo systemctl stop cadastroapp.service && sudo systemctl daemon-reload && sudo systemctl start cadastroapp.service'
 
 
 
