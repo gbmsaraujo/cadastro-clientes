@@ -1,5 +1,22 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "ABC",
         "importPath": "abc",
         "description": "abc",
@@ -280,6 +297,38 @@
         "documentation": {}
     },
     {
+        "label": "DATABASE_NAME",
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "isExtraImport": true,
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "HOST_DB",
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "isExtraImport": true,
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD_DB",
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "isExtraImport": true,
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "USER_DB",
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "isExtraImport": true,
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "src.models.configs.base",
         "description": "src.models.configs.base",
@@ -349,6 +398,42 @@
         "description": "src.main.serve",
         "isExtraImport": true,
         "detail": "src.main.serve",
+        "documentation": {}
+    },
+    {
+        "label": "USER_DB",
+        "kind": 5,
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "peekOfCode": "USER_DB = os.getenv(\"USER_DB\")\nPASSWORD_DB = os.getenv(\"PASSWORD_DB\")\nHOST_DB = os.getenv(\"HOST_DB\")\nDATABASE_NAME = os.getenv(\"DATABASE_NAME\")",
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD_DB",
+        "kind": 5,
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "peekOfCode": "PASSWORD_DB = os.getenv(\"PASSWORD_DB\")\nHOST_DB = os.getenv(\"HOST_DB\")\nDATABASE_NAME = os.getenv(\"DATABASE_NAME\")",
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "HOST_DB",
+        "kind": 5,
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "peekOfCode": "HOST_DB = os.getenv(\"HOST_DB\")\nDATABASE_NAME = os.getenv(\"DATABASE_NAME\")",
+        "detail": "src.constants.constants",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_NAME",
+        "kind": 5,
+        "importPath": "src.constants.constants",
+        "description": "src.constants.constants",
+        "peekOfCode": "DATABASE_NAME = os.getenv(\"DATABASE_NAME\")",
+        "detail": "src.constants.constants",
         "documentation": {}
     },
     {
@@ -464,7 +549,7 @@
         "kind": 6,
         "importPath": "src.models.configs.connection",
         "description": "src.models.configs.connection",
-        "peekOfCode": "class DBConnectionHandler:\n    def __init__(self) -> None:\n        self.__connection_string = 'mysql+pymysql://gabriel:Ari&l0515@localhost:3306/cadastro'\n        self.__engine = self.__create_database_engine()\n        self.session = None\n    def __create_database_engine(self):\n        engine = create_engine(self.__connection_string)\n        return engine\n    def get_engine(self):\n        return self.__engine",
+        "peekOfCode": "class DBConnectionHandler:\n    def __init__(self) -> None:\n        self.__connection_string = (\n            f\"mysql+pymysql://{USER_DB}:{PASSWORD_DB}@{HOST_DB}/{DATABASE_NAME}\"\n        )\n        self.__engine = self.__create_database_engine()\n        self.session = None\n    def __create_database_engine(self):\n        engine = create_engine(self.__connection_string)\n        return engine",
         "detail": "src.models.configs.connection",
         "documentation": {}
     },
