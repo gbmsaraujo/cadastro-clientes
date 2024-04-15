@@ -18,17 +18,17 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         HOST_NAME: ${{ secrets.EC2_HOST }}
-        USER_NAME: ${{ secrets.USER_NAME }}
+        USER_NAME: ${{ secrets.EC2_USERNAME }}
         
     - name: Create private key file
-      run: echo "${{ PRIVATE_KEY }}" > private_key
+      run: echo "${ PRIVATE_KEY }" > private_key
       
     - name: Permission private_key
       run: chmod 600 private_key
 
     - name: Connection in EC2
       run: |  
-        ssh -i private_key ${USER_NAME}@${HOST_NAME}
+        ssh -i private_key ${ USER_NAME }@${ HOST_NAME }
 
     - name: list repo
       run: ls
