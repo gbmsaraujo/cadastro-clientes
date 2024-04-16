@@ -700,7 +700,7 @@
         "kind": 2,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "def index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])\ndef delete():\n    http_request = request_adapter(request)",
+        "peekOfCode": "def index():\n    return \"Hello to register clients!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])\ndef delete():\n    http_request = request_adapter(request)",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
@@ -745,7 +745,7 @@
         "kind": 5,
         "importPath": "src.main.routes.cadastro",
         "description": "src.main.routes.cadastro",
-        "peekOfCode": "app_routes_bp = Blueprint(\"api_routes\", __name__)\n@app_routes_bp.route(\"/\")\ndef index():\n    return \"Hello World!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])",
+        "peekOfCode": "app_routes_bp = Blueprint(\"api_routes\", __name__)\n@app_routes_bp.route(\"/\")\ndef index():\n    return \"Hello to register clients!\"\n@app_routes_bp.route(\"/cadastro\", methods=[\"POST\"])\ndef cadastro():\n    http_request = request_adapter(request)\n    response = cadastro_compose().cadastrar_view(http_request)\n    return response\n@app_routes_bp.route(\"/delete\", methods=[\"PUT\"])",
         "detail": "src.main.routes.cadastro",
         "documentation": {}
     },
