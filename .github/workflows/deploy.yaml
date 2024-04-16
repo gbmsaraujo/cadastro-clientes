@@ -25,5 +25,5 @@ jobs:
         ls && 
         cd cadastro-clientes/ &&
         git pull origin main &&
-        systemctl restart cadastroapp.service
+        systemctl restart cadastroapp.service"
         
